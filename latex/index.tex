@@ -1,0 +1,71 @@
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 
+
+\documentclass[11pt, letterpaper,twocolumn]{article}
+%\teusepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{lettrine}
+\usepackage[top=1.5in, bottom=1.00in, left=0.85in, right=0.65in]{geometry}
+\usepackage{wrapfig}
+\usepackage{xltxtra}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{listings}
+\usepackage{float}
+\usepackage{subfig}
+\usepackage{float}
+\usepackage{url}
+\lstdefinestyle{customasm}{
+  belowcaptionskip=1\baselineskip,
+  xleftmargin=\parindent,
+  language=[x86masm]Assembler,
+  basicstyle=\footnotesize\ttfamily,
+  commentstyle=\color{light-gray},
+  basicstyle=\footnotesize\ttfamily, % Standardschrift
+  numbers=left,               % Ort der Zeilennummern
+  numberstyle=\tiny,          % Stil der Zeilennummern
+  backgroundcolor=\color{light-gray},
+  belowcaptionskip=0em,
+}
+\lstdefinestyle{custombash}{
+  belowcaptionskip=1\baselineskip,
+  basicstyle=\footnotesize\ttfamily,
+  commentstyle=\color{light-gray},
+  basicstyle=\footnotesize\ttfamily, % Standardschrift
+  backgroundcolor=\color{light-gray},
+  belowcaptionskip=0em,
+}
+\renewcommand*{\lstlistingname}{Código}
+\definecolor{inil}{HTML}{3B9CB2}
+\definecolor{titles}{HTML}{751D3E}
+\setmainfont{Roboto Slab}
+\definecolor{light-gray}{gray}{0.95}
+%7in x 8.5in
+%3.25in x 8.5in
+\setlength{\columnsep}{0.5cm}
+
+\titleformat{\section}
+{\color{titles}\normalfont\LARGE\bfseries}
+{\color{titles}\thesection}{1em}{}
+
+\titleformat{\subsection}
+{\color{titles}\normalfont\normalsize\bfseries}
+{\color{titles}\thesubsection}{1em}{}
+
+\newcommand{\capword}[1]{
+	\lettrine[lines=3,  lraise=0.3, lhang=0.2]{\textcolor{inil}{#1}}{}
+}
+\floatstyle{boxed}
+\restylefloat{figure}
+\DeclareGraphicsExtensions{.png}
+\graphicspath{{img/}}
+
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox[cmyk]{0.43, 0.35, 0.35,0.01}{\parbox{\columnwidth}{\hspace{15pt}#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white, singlelinecheck=true, margin=0pt, font={bf,footnotesize}}
+\begin{document}
+\include{chap1}
+\end{document}
