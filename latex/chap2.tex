@@ -251,7 +251,7 @@ parte del me anismo de memoria virtual por el que fue concebido el Paging. Sin
 olvidar la seguridad. Swapping es el mecanismo que intercambia una page
 contenida dentro de un page frame a un dispositivo de almacenmiento secundario
 y pone ptra page en su lugar. Esto se utiliza para extender el espacio
-disponible en memoria en ciertos casos. El sistema de memori virtual se
+disponible en memoria en ciertos casos. El sistema de memoria virtual se
 concibio debido a que, desde la creación de las computadoras, la memoria RAM
 siempre ha sido mas cara que los dispositivos de almacenamiento magnético. El
 sistema de memoria virtual nos permite extender la memoria disponible para
@@ -274,7 +274,7 @@ logical address en dos niveles en lugar de tres. Los primeros 10 bits mas
 significativos son el Page Directory y los siguientes 22 son el offset de la
 physical address. Los bits de los campos del Page Directory siguen siendo los
 mismos excepto que el campo de la physical address solo se toman los primeros
-10 bits mas significativos debidoa que estamos manejando múltiplos de 4 MB y
+10 bits mas significativos debido a que estamos manejando múltiplos de 4 MB y
 los 22 bits menos significativos de estos múltiplos siempre se encuentran
 apagados. Cual método usar depende de la aplicación. El método de Paging
 decrece en rendimiento cuando un proceso solicita bloques de memoria
