@@ -519,7 +519,7 @@ representado como (\texttt{32KB} - \texttt{1KB})} .
 
 En la tabla se muestra un bootloader que imprime la letra ``A''.
 
-\lstinputlisting[style=customasm, caption=Un simple bootloader]{aboot.asm}
+\lstinputlisting[style=customasm, caption=Un simple bootloader]{../src/aboot.asm}
 
 Las primeras dos líneas de código son directivas de compilador que indican la
 operación en modo de 16 bits y que las direcciones usadas son relativas a la
@@ -539,12 +539,12 @@ servicio es indicado por un número de servicio definido en la arquitectura del
 BIOS. Las siguientes dos lineas del código invocan a una subrutina preparada
 para la impresión de un caracter en pantalla:
 
-\lstinputlisting[style=customasm, linerange=5-6, numbers=none]{aboot.asm}
+\lstinputlisting[style=customasm, linerange=5-6, numbers=none]{../src/aboot.asm}
 
 La primera linea almacena en \texttt{AL} el caracter a imprimir en código
 ASCIII, 67 para la letra A. La segunda línea llama a la subrutina de impresión.
 
-\lstinputlisting[style=customasm, linerange=10-17, numbers=none]{aboot.asm}
+\lstinputlisting[style=customasm, linerange=10-17, numbers=none]{../src/aboot.asm}
 
 El cuerpo de la subrutina prepara los datos para llamar a la interrupción
 necesaria. \texttt{AH} almacena el tipo de servicio para impresión en pantalla
@@ -558,11 +558,11 @@ seguidos de la letra H}.
 
 Por último se cicla a la computadora en un ciclo infinito con la instrucción:
 
-\lstinputlisting[style=customasm, linerange=7-7, numbers=none]{aboot.asm}
+\lstinputlisting[style=customasm, linerange=7-7, numbers=none]{../src/aboot.asm}
 
 Las siguientes instrucciones requiere un poco mas de explicación:
 
-\lstinputlisting[style=customasm, linerange=19-20, numbers=none]{aboot.asm}
+\lstinputlisting[style=customasm, linerange=19-20, numbers=none]{../src/aboot.asm}
 
 Note que nuestro programa debería de hacer un ciclo infinito en la última
 instrucción descrita. Por lo tanto estas dos lineas no se alcanzarían en un
