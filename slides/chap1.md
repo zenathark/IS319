@@ -6,7 +6,7 @@ Prof. Juan Carlos Galán Hernández
 - Contact:
   + e-mail: <juan.galan@udlap.mx>
   + Room: LA-202
-  + Website:
+  + Resources Website: [juancgalan.com](http://juancgalan.com/IS319)
 ////
 ####Scoring:
   * 60% Exams
@@ -67,7 +67,7 @@ _____________
 <section>
 
 <h4> How we came up with the idea of a *computer*? </h4>
-![?](pics/stick-figure.png)
+<img src="pics/stick-figure.png" alt="?" style="width: 600px;"/>
 </section>
 <section data-background="pics/BRL61-0560.jpg">
  <p class="fragment roll-in"> In order to understand what an Operating System is, we must understand the idea behind computer hardware </p>
@@ -78,7 +78,7 @@ _____________
 </section>
 ////
 ####A representation of a turing machine
-![Turing Machine](../img/tm.png)
+<img src="../img/tm.png" alt="Turing Machine" style="width: 700px;"/>
 ////
 ####How a turing machine operates?
 + <p class="fragment roll-in">The head advances one place</p>
@@ -155,7 +155,7 @@ But...
 We have to discuss something first
 ///
 The security concept of *Ring*
-[Security Ring Diagram](../img)
+<img src="../img/ring.png" alt="Ring Security Layers" style="width: 600px;"/>
 ///
 Nowaday, the security ring is implementes at hardware level
 ///
