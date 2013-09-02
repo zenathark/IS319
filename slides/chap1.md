@@ -6,7 +6,7 @@ Prof. Juan Carlos Galán Hernández
 - Contact:
   + e-mail: <juan.galan@udlap.mx>
   + Room: LA-202
-  + Website:
+  + Resources Website: [juancgalan.com](http://juancgalan.com/IS319)
 ////
 ####Scoring:
   * 60% Exams
