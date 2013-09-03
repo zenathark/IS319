@@ -113,6 +113,10 @@
 + Each address split is known as *level*
 ////
 ####Structure of a linear address using the paging method
+<<<<<<< HEAD
+////
+####Table of the paging flags
+=======
 <img src="../img/l-address.png"  alt="Linear Address" style="width: 600px;">
 ////
 ####Table of the paging flags
@@ -120,16 +124,17 @@
 ////
 ####Table of the paging flags
 <img src="../img/linearadd-flag2.png"  alt="Linear Address" style="width: 700px;">
-////
+>>>>>>> 02488a6620634d8a78f8fad7e2731083061d2976
 ////
 + Each Page level points to a *Page Table*
 + The page table structure  is related to the Segmentation Tables 
 + Each page table holds the address to either another page table or to a physical address.
 ////
 ####Diagram of a Page Table
+<<<<<<< HEAD
+=======
 <img src="../img/p-address.png"  alt="Linear Address" style="width: 400px;">
-////
-+ The main advantage of Paging over Segmentation is better *swapping*
+>>>>>>> 02488a6620634d8a78f8fad7e2731083061d2976
 ////
 + The main advantage of Paging over Segmentation is better *swapping*
 + Swapping is the action of moving Pages from RAM memory to another cheaper storage unit.
