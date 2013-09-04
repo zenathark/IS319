@@ -31,3 +31,5 @@
 *.xdy
 *.tdo
 latex/auto/*
+#*#
+latex/#*#
