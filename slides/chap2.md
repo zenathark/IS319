@@ -121,15 +121,12 @@
 ####Table of the paging flags
 <img src="../img/linearadd-flag2.png"  alt="Linear Address" style="width: 700px;">
 ////
-////
 + Each Page level points to a *Page Table*
-+ The page table structure  is related to the Segmentation Tables 
++ The page table structure  is related to the Segmentation Tables
 + Each page table holds the address to either another page table or to a physical address.
 ////
 ####Diagram of a Page Table
 <img src="../img/p-address.png"  alt="Linear Address" style="width: 400px;">
-////
-+ The main advantage of Paging over Segmentation is better *swapping*
 ////
 + The main advantage of Paging over Segmentation is better *swapping*
 + Swapping is the action of moving Pages from RAM memory to another cheaper storage unit.
@@ -138,7 +135,7 @@
 + When a Page is *old enough* and a free page frame is needed, the CPU can allocate the old page in another storage unit like a HDD or a SDD
 ////
 + How the CPU calculate the *age* of a page?
-  + Checks for the Dirty flag 
+  + Checks for the Dirty flag
   + Checks for the Accessed flag
   + Date Bookkeeping
 ////
@@ -169,3 +166,58 @@
 + x86_64 uses four levels with linear address of 46 bits
 ////
 ###Caching
++ RAM memory is one of the fastest storage media on the computer
++ However, the CPU is faster
++ The speed difference means wasted time for the CPU
+////
++ Using higher speed RAM is better for performance, however it could become prohibitive because of the price
++ The solution was to include inside the CPU a faster but smaller RAM (Static RAM)
++ This extra RAM, also known as Cache RAM has a few advantages over the main RAM memory
+////
++ Cache Advantages:
+  + Using SRAM is faster than DRAM (Dynamic RAM)
+  + It's closer to the CPU, so data needs to travel less distance
+////
++ Because Cache is smaller, it must be handled different than RAM with Virtual Memory
++ It's function is based in the *Principle of Locality*
+////
+###The Principle of Locality
+
+> If a particular memory location is referenced at a particular time, then it is
+> likely that nearby memory locations will be referenced in the near future. In
+> this case it is common to attempt to guess the size and shape of the area
+> around the current reference for which it is worthwhile to prepare faster
+> access the ones close to it.
+
+////
++ The cache is splitted in blocks called *lines*
++ A line can hold several memory blocks
++ The cache is also accessed by the Paging Unit
+////
++ When the CPU request a memory address, it checks the Cache first
++ If it is not in cache, a *cache miss* is rised
++ Then the paging unit looks for it in RAM
++ Finally the paging unit loads the memory address and the closer ones in a *line*
+////
++ If the memory address is on the Cache, a *cache hit* is rised
++ An address can be stored on multiple lines
++ A system with several CPUs must coordinate the cache of each CPU
+////
++ There are two ways of synchronization of Cache-Main Memory:
+  + Write Through: When a locality is writed, the cache controller writes it in both the cache and the RAM memory
+  + Write Back. The locality is only updated in the cache. The memory is updated at a*flush* event
+////
++ Whith multiple CPUs, each cache controller checks on a *flush* if other CPUs has the same address on its cache and request an update if found.
++ This is known as *cache snooping*
+////
++ There are several levels of cache:
+  + L1
+  + L2
+  + L3
+  ...
++ The L1 level is the faster and smaller one, as the level increases, the memory speed decreases but the size gets bigger
++ The operating system can choose to manage each level separately or as a whole
+////
++ There is a second no programmable cache
++ This cache is known as the Translation Lookaside Buffer (TLB)
++ This cache holds the physical address of each linear address inside the cache
