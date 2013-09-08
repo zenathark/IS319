@@ -236,7 +236,7 @@ método, o Paging, divide a la linear address en tres bloques. El primer bloque
 de los diez bits mas significativos, es decir el bit 31 al 22, es llamado Page
 Directory. Los siguientes diez bits son llamados Page Table y los últimos doce
 bits son llamados offset. La intención de usar dos niveles es de reducir el uso
-de memoria por tabla. Este esquema permite mantener una tabla de $2^10$ o 1 MB
+de memoria por tabla. Este esquema permite mantener una tabla de $2^{10}$ o 1 MB
 para almacenar los Table Directory y cada Table Index es cargada a memoria
 cuando es requerida por un proceso. Tanto la Table Directory como la Table
 Index tienen la misma estructura. Este método permite Pages de 4KB de
@@ -397,26 +397,6 @@ llamado \emph{Translation Lookaside Buffer} (TLB). Cuando una pysichal address
 es calculada, se utilizan la Page Tables la primera vez y el resultado se
 guarda en la TLB para que en posteriores accesos se utilize la dirección
 almacenada en la TLB en lugar de hacer todo el cálculo.
-
-\subsection{Pyshical Address Real World Example}
-
-En esta última sección se mostrará como Windows 8 en su versión de 64 bits
-almacena las linear address, llamadas virtual address en los sistemas
-operativos modernos, y hacer el cálculo de la physical address.
-
-Debido a que windows mantiene los valores de las diferentes tablas en registros
-especiales nos puede mostrar el contenido y dirección de cada una de las cuatro
-tablas usadas. Utilizaremos el contenido asociado que nos muestra el kernel
-debugger de la última page table. Se deja como experimento personal al lector
-el comprobar las direcciones de las otras tablas. El valor que nos interesa es
-\texttt{} que son los bits del 12 al 20 del contenido de la page table, este
-valor coincide con el valor pfn mostrado por el kernel debugger. A este valor
-de concatenamos el offset de la virtual address que son los 12 bits menos
-significativos. Esto nos da \texttt{}.
-
-Para comprobar que nuestro caculo es correcto, le pedimos al kernel debugger
-que ns muestre el contenido de la physical address caculada usando la
-instrucción \texttt{!dd}.
 
 %%% Local Variables: 
 %%% mode: latex
