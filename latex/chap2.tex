@@ -1,5 +1,5 @@
 \section{Memory Management} 
-Una de las actividades principales del kernel es el manejo de memoria RAM. En
+\capword{Una} de las actividades principales del kernel es el manejo de memoria RAM. En
 lo subsecuente se hará referencia a la memoria RAM solamente como memoria del
 sistema. Como puede deducirse después de estudiar el arranque de una PC, el
 sistema operativo debe de proveer una capa de abstracción para el acceso a
@@ -14,11 +14,11 @@ sobreescribir el mismo kernel o los servicios del BIOS.  Por esta razón se opta
 en el diseño de kernels por crear una capa de abstracción de la memoria
 apuntando a incluir las siguientes características:
 \begin{enumerate}
-\item Seguridad
-\item Transparencia
-\item Eficiencia en el manejo del espacio disponible
-\item Manejo de grandes volúmenes de aplicaciones activas
-\item Flexibilidad
+    \item Seguridad
+    \item Transparencia
+    \item Eficiencia en el manejo del espacio disponible
+    \item Manejo de grandes volúmenes de aplicaciones activas
+    \item Flexibilidad
 \end{enumerate} Estos objetivos intentan dotar al sistema operativo con una
 capa de abstracción de manejo de memoria que le permita ofrecer un ambiente
 confiable y eficiente a cada aplicación además de ser lo suficientemente
@@ -247,7 +247,7 @@ Las funciones de las banderas se explican a continuación. Los nuevos conceptos
 que aparacen en la tabla se iran explicando a lo largo del resto del capítulo.
 \begin{table*}[ht]
 \begin{center}
-\begin{tabular}{p{1cm}p{.8\linewidth}} 
+\begin{tabular}{p{3cm}p{.7\linewidth}} 
   \multicolumn{1}{c}{Nombre} & \multicolumn{1}{c}{Descripción}\\
   \hline
   Present          & Tiene el valors 1 si la Page se encuentra en memoria. Si 
