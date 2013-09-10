@@ -37,7 +37,7 @@
 <img src="../img/elf.png">
 ////
 ####PE
-<img src="../img/pe.png">
+<img src="../img/pe.JPG">
 ////
 ####Mach-O
-<img src="../img/macho.png">
+<img src="../img/macho.JPG" style="width:300px;">
