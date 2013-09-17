@@ -40,4 +40,4 @@
 <img src="../img/pe.JPG">
 ////
 ####Mach-O
-<img src="../img/macho.JPG" style="width:300px;">
+<img src="../img/macho.jpg" style="width:300px;">
