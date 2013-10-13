@@ -34,3 +34,4 @@ latex/auto/*
 #*#
 latex/#*#
 .DS_Store
+*.swp
